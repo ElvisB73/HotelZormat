@@ -46,16 +46,43 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Diadesemana.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diadesemana.Designer.cs">
+      <DependentUpon>Diadesemana.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHabitacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>FrmHabitacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmPRINCIPAL .cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmPRINCIPAL .Designer.cs">
       <DependentUpon>FrmPRINCIPAL .cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmReserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReserva.Designer.cs">
+      <DependentUpon>FrmReserva.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Diadesemana.resx">
+      <DependentUpon>Diadesemana.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHabitacion.resx">
+      <DependentUpon>FrmHabitacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmPRINCIPAL .resx">
       <DependentUpon>FrmPRINCIPAL .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReserva.resx">
+      <DependentUpon>FrmReserva.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
