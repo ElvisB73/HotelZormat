@@ -58,6 +58,12 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>FrmHabitacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmHabitacionGestiion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHabitacionGestiion.Designer.cs">
+      <DependentUpon>FrmHabitacionGestiion.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmPRINCIPAL .cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmHabitacion.resx">
       <DependentUpon>FrmHabitacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHabitacionGestiion.resx">
+      <DependentUpon>FrmHabitacionGestiion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPRINCIPAL .resx">
       <DependentUpon>FrmPRINCIPAL .cs</DependentUpon>
@@ -107,6 +116,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Hotel.Datos_\Hotel.Datos.csproj">
+      <Project>{91FBCAD5-08A2-4C32-81D9-59245D89CC57}</Project>
+      <Name>Hotel.Datos</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Hotel.Negocio_\Hotel.Negocio.csproj">
       <Project>{8e57accf-ad25-4777-9aaf-80e5f1cb4131}</Project>
       <Name>Hotel.Negocio</Name>

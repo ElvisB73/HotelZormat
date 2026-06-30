@@ -98,7 +98,7 @@
             this.BtnConexion.TabIndex = 6;
             this.BtnConexion.Text = "Conexion";
             this.BtnConexion.UseVisualStyleBackColor = true;
-            this.BtnConexion.Click += new System.EventHandler(this.button1_Click_1);
+            //this.BtnConexion.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // Form1
             // 

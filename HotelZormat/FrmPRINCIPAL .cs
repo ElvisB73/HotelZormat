@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Hotel.Datos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -36,38 +37,39 @@ namespace HotelZormat
 
         private void btnIniciarsesion_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show("hiciste click");
+            MessageBox.Show("hiciste click");
             if (txtUsuario.Text == "Admin" && txtContraseña.Text == "1234")
             {
                 MessageBox.Show("bienvenido admin");
 
-             
+
             }
             else { MessageBox.Show("eso no es eso"); }
-            
-           
 
 
 
-            
+
+
+
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e, string connStr)
         {
-            string connStr = ConfigurationBD.ObtenerConnectionString();
+            string v = configuracionDB.ObtenerConnectionString();
+            string connStr = v;
             try
             {
-                using (var conn = new SqlConnection(ConnStr))
+                using (SqlConnection conn = new SqlConnection(connStr))
                 {
                     conn.Open();
-                    var cmd = new SqlCommand("SELECT COUNT(*) FROM HABITACIONES", CONN);
+                    var cmd = new SqlCommand("SELECT COUNT(*) FROM HABITACIONES", connStr);
                     int TOTAL = (int)cmd.ExecuteScalar();
 
                     MessageBox.Show("conectado. Hay" + TOTAL + "habitaciones en la BD.");
 
                 }
             }
-            catch (sqlException ex)
+            catch (SqlException ex)
             {
                 MessageBox.Show(" Error de conexion" + ex.Message, " BD inaccesible",
 
